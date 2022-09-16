@@ -6,25 +6,30 @@ const baseURL = "https://rickandmortyapi.com/api/episode";
 
 const Home = () => {
   const [episodes, setEpisodes] = useState([]);
-
-  const fetchEpisodes = async () => {
-    const res = await fetch(baseURL);
-    const { results } = await res.json();
-
-    if (results) {
-      setEpisodes(results);
-    }
-  };
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    const fetchEpisodes = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch(baseURL);
+        const { results } = await res.json();
+
+        if (results) {
+          setEpisodes(results);
+          setLoading(false);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
     fetchEpisodes();
   }, []);
 
-  console.log(episodes);
-
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1 className="page-title">Episodes</h1>
       <div className="episodes">
         {episodes.map((episode, index) => (
           <div key={index}>
