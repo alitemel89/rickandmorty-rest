@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Loading from "../components/loading/Loading";
+import CharacterCard from "../../components/character/CharacterCard";
+import Loading from "../../components/loading/Loading";
+import "./Episode.css";
 
 const Episode = () => {
   const { id } = useParams();
@@ -37,12 +39,21 @@ const Episode = () => {
 
   if (loading) return <Loading />;
 
+  console.log(characterDetails);
   return (
     <div>
-      <h1>Characters</h1>
-      {characterDetails.map((character) => (
-        <div key={character.id}>{character.name}</div>
-      ))}
+      <h1 className="page-title">Characters</h1>
+      <div className="characters">
+        {characterDetails.map((character) => (
+          <CharacterCard
+            name={character.name}
+            image={character.image}
+            status={character.status}
+            gender={character.gender}
+            species={character.species}
+          />
+        ))}
+      </div>
     </div>
   );
 };

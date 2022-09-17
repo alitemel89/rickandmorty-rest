@@ -13,7 +13,6 @@ const Navbar = () => {
           </span>
           <h1 className="navbar-title">Rick and Morty</h1>
         </div>
-
         <button className="btn">REST API DOCS</button>
       </div>
     </nav>

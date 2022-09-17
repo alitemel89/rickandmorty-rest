@@ -1,0 +1,31 @@
+.page-title {
+    color: #fff;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 3rem;
+}
+
+.characters {   
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin: 3rem;
+}
+
+
+@media screen and (max-width:768px) {
+    .characters {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: .5rem;
+    }
+}
+
+
+@media screen and (max-width:576px) {
+    .characters {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: .5rem;
+    }
+}

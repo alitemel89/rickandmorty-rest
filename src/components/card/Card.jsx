@@ -12,8 +12,7 @@ const Card = ({ id, name, episode }) => {
             <Link to={`episode/${id}`} className="card__link">
                 Episode Characters
             </Link>
-        </div>
-        
+        </div>    
     </div>
   );
 };

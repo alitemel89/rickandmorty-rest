@@ -1,9 +1,9 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 import Navbar from "./components/navbar/Navbar";
-import CharacterDetails from "./pages/CharacterDetails";
-import Episode from "./pages/Episode";
-import Home from "./pages/Home";
+
+import Home from "./pages/home/Home";
+import Episode from "./pages/episode/Episode";
 
 function App() {
 
@@ -12,7 +12,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/character" element={<CharacterDetails />} />
         <Route path={`/episode/:id`} element={<Episode />} />
       </Routes>
     </BrowserRouter>
