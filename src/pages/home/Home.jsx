@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "../../components/card/Card";
+import Loading from "../../components/loading/Loading";
 import "./Home.css";
 
 const baseURL = "https://rickandmortyapi.com/api/episode";
@@ -26,6 +27,8 @@ const Home = () => {
 
     fetchEpisodes();
   }, []);
+
+  if (loading) return <Loading />
 
   return (
     <div>

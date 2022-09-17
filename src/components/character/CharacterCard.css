@@ -1,3 +1,11 @@
+.card:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
 .card__header {
     display: flex;
     justify-content: space-between;
@@ -43,7 +51,8 @@
 
 
 .card__features span  {
-    background-color: #ccc;
+    background-color:  #334155;
     padding: .2rem 1rem;
     border-radius: 5px;
+    color: #fff;
 }

@@ -7,7 +7,7 @@ import "./Episode.css";
 const Episode = () => {
   const { id } = useParams();
   const episodeURL = `https://rickandmortyapi.com/api/episode/${id}`;
-
+  // eslint-disable-next-line
   const [characters, setCharacters] = useState([]);
   const [characterDetails, setCharacterDetails] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -35,11 +35,11 @@ const Episode = () => {
     };
 
     fetchCharacters();
+    // eslint-disable-next-line
   }, []);
 
   if (loading) return <Loading />;
 
-  console.log(characterDetails);
   return (
     <div>
       <h1 className="page-title">Characters</h1>
