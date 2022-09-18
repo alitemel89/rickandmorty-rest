@@ -11,6 +11,7 @@ const Episode = () => {
   const [characters, setCharacters] = useState([]);
   const [characterDetails, setCharacterDetails] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [filteredCharacters, setFilteredCharacters] = useState([]);
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -38,15 +39,36 @@ const Episode = () => {
     // eslint-disable-next-line
   }, []);
 
+  const filterHumans = () => {
+    setFilteredCharacters(
+      characterDetails.filter((character) => character.species === "Human")
+    );
+  };
+
+  const filterAliens = () => {
+    setFilteredCharacters(
+      characterDetails.filter((character) => character.species === "Alien")
+    );
+  };
+
   if (loading) return <Loading />;
 
   console.log(characterDetails);
+  console.log(filteredCharacters);
 
   return (
     <div>
       <h1 className="page-title">{`Characters of Episode ${id}`}</h1>
+      <div className="button-group">
+        <button className="btn alien" onClick={filterAliens}>
+          Aliens
+        </button>
+        <button className="btn human" onClick={filterHumans}>
+          Humans
+        </button>
+      </div>
       <div className="characters">
-        {characterDetails.map((character) => (
+        {filteredCharacters.map((character) => (
           <CharacterCard
             key={character.id}
             id={character.id}

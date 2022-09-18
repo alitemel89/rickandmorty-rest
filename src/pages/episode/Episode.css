@@ -12,6 +12,16 @@
     margin: 3rem;
 }
 
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button-group .alien {
+    background: #ec4899;
+}
+
 
 @media screen and (max-width:768px) {
     .characters {
