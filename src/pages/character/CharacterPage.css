@@ -1,0 +1,63 @@
+.character-container {
+    display: flex;
+    margin: 1rem 10rem;
+}
+
+.character-image {
+    width: 100%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.character-image img {
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.character-details {
+    padding: 0 2rem;
+    color: #fff;
+}
+
+.character-status .alive {
+    background-color: #047857;
+    padding: .2rem 1rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.character-status .dead {
+    background-color: #f43f5e;
+    padding: .2rem 1rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.character-title  {
+    margin: 1rem 0;
+}
+
+.character-text {
+    margin-top: 1rem;
+}
+
+.character-btn {
+    margin-top: 1.5rem;
+}
+
+
+@media screen and (max-width:768px) {
+    .character-container {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .character-image {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+

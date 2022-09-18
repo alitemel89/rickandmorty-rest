@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./CharacterCard.css";
 
@@ -17,6 +18,10 @@ const CharacterCard = ({ id, image, name, status, gender, species }) => {
           </span>
           <span>{species}</span>
         </div>
+
+        <Link to={`/character/${id}`} className="card__character">
+          More
+        </Link>
       </div>
     </div>
   );

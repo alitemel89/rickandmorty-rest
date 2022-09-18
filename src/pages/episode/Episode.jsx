@@ -40,12 +40,16 @@ const Episode = () => {
 
   if (loading) return <Loading />;
 
+  console.log(characterDetails);
+
   return (
     <div>
-      <h1 className="page-title">Characters</h1>
+      <h1 className="page-title">{`Characters of Episode ${id}`}</h1>
       <div className="characters">
         {characterDetails.map((character) => (
           <CharacterCard
+            key={character.id}
+            id={character.id}
             name={character.name}
             image={character.image}
             status={character.status}

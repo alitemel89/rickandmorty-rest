@@ -14,7 +14,7 @@ const Navbar = () => {
               <GiTornadoDiscs size={35} color="#fff" />
             </Link>
           </span>
-          <h1 className="navbar-title">Rick and Morty</h1>
+          <h1 className="navbar-title">Rick and Morty Episodes</h1>
         </div>
         <a
           className="btn"
