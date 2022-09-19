@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path={`/episode/:id`} element={<Episode />} exact />
+        <Route path={`/episode/:id`} element={<Episode />} />
         <Route path={`/character/:id`} element={<CharacterPage />} />
       </Routes>
     </BrowserRouter>
