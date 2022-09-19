@@ -53,9 +53,6 @@ const Episode = () => {
 
   if (loading) return <Loading />;
 
-  console.log(characterDetails);
-  console.log(filteredCharacters);
-
   return (
     <div>
       <h1 className="page-title">{`Characters of Episode ${id}`}</h1>

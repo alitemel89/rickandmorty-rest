@@ -37,8 +37,6 @@ const CharacterPage = () => {
 
   const { name, image, gender, species, status } = character;
 
-  console.log(character);
-
   return (
     <div className="character-container">
       <div className="character-image">
